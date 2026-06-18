@@ -1,6 +1,6 @@
 # 8-Bit CPU Design
 
-A simple 8-bit CPU designed and simulated in **Logisim-Evolution v4.1.0**.
+A simple 8-bit CPU designed and simulated in **Logisim**.
 
 ## Overview
 
@@ -24,20 +24,6 @@ This project implements a basic 8-bit CPU from scratch using digital logic compo
 | `8-bit-CPU-design.circ` | Main Logisim-Evolution circuit file |
 | `RAM File` | Memory initialization file — loaded into RAM at simulation start |
 | `Decimal Decoder File` | Lookup table used by the Decimal_Decode module |
-
-## Control Signals (Main Circuit)
-
-The main circuit exposes the following control pins:
-
-| Signal | Direction | Description |
-|--------|-----------|-------------|
-| `WE1`–`WE7` | Input | Write Enable signals for each register/memory unit |
-| `OE1`–`OE8` | Input | Output Enable signals for each register/memory unit |
-| `Count_Enable` | Input | Enables the Program Counter to increment |
-| `Counter_OE` | Input | Enables Program Counter output onto the bus |
-| `Internal_OE` | Input | Enables internal data bus output |
-| `OE_Testing_Data` | Input | Output enable for external test data |
-| `OE_Testing_Data2` | Input | Secondary output enable for external test data |
 
 ## Bus Structure
 
@@ -70,13 +56,13 @@ The main circuit exposes the following control pins:
 
 ## Requirements
 
-- **[Logisim-Evolution v4.1.0](https://github.com/logisim-evolution/logisim-evolution/releases/tag/v4.1.0)** or later
+- **[Logisim](http://www.cburch.com/logisim/)** (by Carl Burch)
 
-> **Warning:** This file was created with Logisim-Evolution v4.1.0. Opening it in the original Logisim (by Carl Burch) or older versions may cause issues — component pin positions and sizes differ between the two applications, which can break wire connections and require manual fixes.
+> **Warning:** This file was created with the original Logisim. Opening it in Logisim-Evolution may cause issues — component pin positions and sizes differ between the two applications, which can break wire connections and require manual fixes.
 
 ## Usage
 
-1. Download and install [Logisim-Evolution v4.1.0+](https://github.com/logisim-evolution/logisim-evolution/releases)
+1. Download and install [Logisim](http://www.cburch.com/logisim/)
 2. Open `8-bit-CPU-design.circ`
 3. Load `RAM File` into the RAM component via **right-click → Load Image**
 4. Use the **Simulate** menu to start the clock and step through the circuit
